@@ -1,0 +1,135 @@
+#:kivy
+MDFloatLayout:
+    md_bg_color: [1, 1, 1, 1]
+    Carousel:
+        id: carousel
+        #scroll_timeout: 0
+        on_current_slide: app.current_slide(self.index)
+
+        MDFloatLayout:
+            Image:
+                source: "assets/images/undraw_Authentication_re_svpt (1).png"
+                allow_stretch: False
+                pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                size_hint: .8, .8
+
+
+            MDLabel:
+                text: "Add all Accounts and Manage"
+                color: rgba(95, 88, 117, 255)
+                pos_hint: {'center_y': .47}
+                halign: "center"
+                font_name: 'assets/fonts/Poppins-Bold.ttf'
+                font_size: "14sp"
+            
+            MDLabel:
+                text: "You can add all kinds Accounts in oneplus & Manage them"
+                color: rgba(135, 143, 158, 255)
+                pos_hint: {'center_x': .5,'center_y': .35}
+                size_hint_x: .92
+                halign: "center"
+                font_name: 'assets/fonts/Poppins-Medium.ttf'
+                font_size: "14sp"
+            
+            MDTextButton:
+                text: 'Skip'
+                pos_hint: {'center_x': .88,'center_y': .95}
+                font_name: 'assets/fonts/Poppins-Medium.ttf'
+                font_size: "13sp"
+                color: rgba(7, 134, 84, 255)
+                on_release: app.next()
+
+        MDFloatLayout:
+            Image:
+                source: "assets/images/undraw_Agreement_re_d4dv (1).png"
+                allow_stretch: False
+                pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                size_hint: .8, .8
+
+            MDLabel:
+                text: "Track your Activity"
+                color: rgba(95, 88, 117, 255)
+                pos_hint: {'center_y': .47}
+                halign: "center"
+                font_name: 'assets/fonts/Poppins-Bold.ttf'
+                font_size: "14sp"
+            
+            MDLabel:
+                text: "You can track your income, expenses activities in a go!"
+                color: rgba(135, 143, 158, 255)
+                pos_hint: {'center_x': .5,'center_y': .35}
+                size_hint_x: .92
+                halign: "center"
+                font_name: 'assets/fonts/Poppins-Medium.ttf'
+                font_size: "14sp"
+
+            MDTextButton:
+                text: 'Skip'
+                pos_hint: {'center_x': .88,'center_y': .95}
+                font_name: 'assets/fonts/Poppins-Medium.ttf'
+                font_size: "13sp"
+                color: rgba(7, 134, 84, 255)
+                on_release: app.next()
+
+
+        MDFloatLayout:
+            Image:
+                source: "assets/images/undraw_Completing_re_i7ap (1).png"
+                allow_stretch: False
+                pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                size_hint: .8, .8
+
+            MDLabel:
+                text: "Make Online Payments and Transactions"
+                color: rgba(95, 88, 117, 255)
+                pos_hint: {'center_y': .47}
+                halign: "center"
+                font_name: 'assets/fonts/Poppins-Bold.ttf'
+                font_size: "14sp"
+            
+            MDLabel:
+                text: "You can make online payments and transactions anywhere and anytime in the globe"
+                color: rgba(135, 143, 158, 255)
+                pos_hint: {'center_x': .5,'center_y': .35}
+                size_hint_x: .92
+                halign: "center"
+                font_name: 'assets/fonts/Poppins-Medium.ttf'
+                font_size: "14sp"
+
+            Button:
+                text: "Get Started"
+                #color: "white"
+                background_color: 0, 0, 0, 0
+                font_name: 'assets/fonts/Poppins-Bold.ttf'
+                font_size: "15sp"
+                size_hint: .9, .075
+                pos_hint: {'center_x': .5,'center_y': .056}
+                canvas.before:
+                    Color:
+                        rgb: rgba(7, 134, 84, 255)
+                
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [10,]
+    MDLabel:
+        id: slide0
+        text: "."
+        color: rgba(47, 46, 65, 255)
+        pos_hint: {'center_x': .9,'center_y': .22}
+        font_size: "80sp"
+
+    MDLabel:
+        id: slide1
+        text: "."
+        color: rgba(233, 237, 240, 255)
+        pos_hint: {'center_x': .5,'center_y': .22}
+        font_size: "80sp"
+        halign: "center"
+
+    MDLabel:
+        id: slide2
+        text: "."
+        color: rgba(233, 237, 240, 255)
+        pos_hint: {'center_x': 1.03,'center_y': .22}
+        font_size: "80sp"
